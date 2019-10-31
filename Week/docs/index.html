@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">PHP 개인공부</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <ul class="list-group">
+        <li class="list-group-item"><a href="./01">2019.10.30</a></li>
+        <li class="list-group-item"><a href="./02">2019.10.31</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-9">
+      <h1>리포트 PHP_201940227</h1>
+      <p>
+        홀수 주차 = md 파일
+        짝수 주차 = html 파일
+      </p>
+      <p>
+        <h2> 2019.10.30 </h2>
+        1주차 <a href="./01">[이동]</a>
+        2019.10.31<button type="button" class="btn btn-primary" onclick="goHref("./01/2")"></button>
+      </p>
+      <p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function goHref(var page){
+    window.open(document.location.href + page);
+  }
+</script>
