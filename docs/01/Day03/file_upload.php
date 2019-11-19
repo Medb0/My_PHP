@@ -1,15 +1,15 @@
 <?php
 
 //설정 시작
-$upload_dir = './uploads';
-$allowed_ext = array('jpg','jpeg','png','gif');
-$field_name = 'myfile';
+$upload_dir = './uploads';    // 업로드 된 파일의 저장할 디렉토리를 설정함.
+$allowed_ext = array('jpg','jpeg','png','gif'); // 배열에 이미지 파일 확장자들을 넣어 이미지 파일만 업로드 되도록 설정한다.
+$field_name = 'myfile'; // 전송되는 name 속성의 값을 설정한다.
 
 // uploads 디렉토리가 없다면 생성
-if(!is_dir($upload_dir)){
-    if(!mkdir($upload_dir,0777))
+if(!is_dir($upload_dir)){   // is_dir() 함수를 사용해서 경로내에 $upload_dir에 설정된 디렉토리가 존재하는지 체크한다.
+    if(!mkdir($upload_dir,0777))  // 존재하지 않을 경우 mkdir() 함수를 사용하여 0777의 퍼미션을 가진 디렉토리를 생성한다.
     {
-      die("업로드 드렉토리 생성에 실패 했습니다.");
+      die("업로드 드렉토리 생성에 실패 했습니다."); // 디렉토리
     };
 }
 
